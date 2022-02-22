@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sirisoapp">
         <activity
+            android:name=".PublicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
