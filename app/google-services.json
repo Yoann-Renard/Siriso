@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "259720984073",
+    "project_id": "androidp-114a8",
+    "storage_bucket": "androidp-114a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259720984073:android:864b729e2e08166db36ad8",
+        "android_client_info": {
+          "package_name": "fr.isen.siriso_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259720984073-p59fdvjr5m7mj79lihbf40cl13udiohk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkKcyDhhmuvB4z6JvQiS1cuamCbxBum2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259720984073-p59fdvjr5m7mj79lihbf40cl13udiohk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
