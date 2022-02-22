@@ -6,4 +6,4 @@ L'application est codé en Kotlin sur Android Studio pour Lollipop 5.1, API v22.
 
 ## Crédits
 
-***Créer par Élise REY, Timmy VILLEMINOT, Yoann RENARD, Tom FOLTIER, Damien SCHACHTELE afin de valider un projet de groupe à l'ISEN Toulon.***
+***Développé par Élise REY, Timmy VILLEMINOT, Yoann RENARD, Tom FOLTIER, Damien SCHACHTELE afin de valider un projet de groupe à l'ISEN Toulon.***
