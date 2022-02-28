@@ -1,4 +1,4 @@
-package fr.isen.siriso_app
+package fr.isen.siriso_app.DataClass
 
 import com.google.firebase.database.IgnoreExtraProperties
 
