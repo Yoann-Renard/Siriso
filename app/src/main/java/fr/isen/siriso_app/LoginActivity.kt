@@ -1,10 +1,9 @@
 package fr.isen.siriso_app
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import fr.isen.siriso_app.databinding.ActivityLoginBinding
@@ -26,30 +25,18 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
     }
 
-    override fun onStart() {
-        super.onStart()
-
-        val currentUser = auth.currentUser
-        if (currentUser != null) {
-        //refresh
+    fun login(view: View){
+        val email = binding.loginMail.text.toString()
+        val password = binding.loginPasswd.text.toString()
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+            if(task.isSuccessful) {
+                val intent= Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }.addOnFailureListener { exception ->
+            Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun createAccount(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
-                    //updateUI(user)
-                } else {
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext, "Authentication failed.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    //updateUI(null)
-                }
-            }
-    }
 }
