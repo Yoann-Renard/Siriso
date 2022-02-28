@@ -8,4 +8,8 @@
     <string name="password">Password</string>
     <string name="alreadyAccount">Already have an account?</string>
     <string name="newAccount">New to Siriso?</string>
+
+    <string name="image">image</string>
+    <string name="text">texte</string>
+    <string name="number">0</string>
 </resources>
