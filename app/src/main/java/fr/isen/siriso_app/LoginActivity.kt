@@ -12,6 +12,7 @@ import fr.isen.siriso_app.databinding.ActivityLoginBinding
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
     lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
