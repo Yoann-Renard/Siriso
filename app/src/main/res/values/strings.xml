@@ -12,4 +12,6 @@
     <string name="image">image</string>
     <string name="text">texte</string>
     <string name="number">0</string>
+
+    <string name="coError">Erreur de connexion</string>
 </resources>

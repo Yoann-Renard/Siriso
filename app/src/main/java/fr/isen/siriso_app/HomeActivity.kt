@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.volley.Request
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -12,7 +15,7 @@ import com.google.firebase.ktx.Firebase
 import fr.isen.siriso_app.DataClass.PublicationClass
 import fr.isen.siriso_app.DataClass.Publications
 import fr.isen.siriso_app.databinding.ActivityHomeBinding
-import fr.isen.siriso_app.network.Publication
+import org.json.JSONObject
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -61,7 +64,7 @@ class HomeActivity : AppCompatActivity() {
     )
     */
 
-    fun getPublications(){
+    fun getPublications() {
         /*myRef.get().addOnSuccessListener {
             Log.i("firebase", "Got value ${it.value}")
             val data = it.getValue(Publications::class.java)
@@ -73,12 +76,12 @@ class HomeActivity : AppCompatActivity() {
         }*/
         myRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val publications_list = arrayListOf<PublicationClass>()
+                val publicationsList = arrayListOf<PublicationClass>()
                 snapshot.children.forEach {
                     it.getValue(PublicationClass::class.java)
-                        ?.let { it1 -> publications_list.add(it1) }
+                        ?.let { it1 -> publicationsList.add(it1) }
                 }
-                parseData(publications_list)
+                parseData(publicationsList)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -87,8 +90,8 @@ class HomeActivity : AppCompatActivity() {
         })
     }
 
-    fun parseData( pub_list: ArrayList<PublicationClass> ) {
+    fun parseData(pubList: ArrayList<PublicationClass> ) {
         binding.postsList.layoutManager = LinearLayoutManager(this)
-        binding.postsList.adapter = PostAdapter(pub_list)
+        binding.postsList.adapter = PostAdapter(pubList)
     }
 }

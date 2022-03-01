@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "955007912087",
+    "firebase_url": "https://siriso-ad8e2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "siriso-ad8e2",
+    "storage_bucket": "siriso-ad8e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955007912087:android:b2a0c72ab85df8324181d2",
+        "android_client_info": {
+          "package_name": "fr.isen.siriso_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955007912087-492dejr36vedmqu1m6b54rpk7ibq0fd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkmf9Uug3uOYb6CX-5Cf9Hp35aO0A3F1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955007912087-492dejr36vedmqu1m6b54rpk7ibq0fd5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
