@@ -12,7 +12,7 @@
 
         <TextView
             android:id="@+id/postTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="@string/text"
@@ -40,8 +40,8 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="59dp"
-            android:layout_height="30dp"
+            android:layout_width="70dp"
+            android:layout_height="29dp"
             android:layout_margin="8dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +62,7 @@
 
             <TextView
                 android:id="@+id/postLikes"
-                android:layout_width="20dp"
+                android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:text="@string/number"
                 android:textSize="20sp" />

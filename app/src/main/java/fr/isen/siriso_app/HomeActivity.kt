@@ -30,7 +30,16 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /*writeNewPublication(
+            publication_name = "char qui fly",
+            user_name = "toto",
+            media_url = "https://www.delapoulealautruche.com/wp-content/uploads/shiba-inu-chien-japonais.jpg",
+            category = "photography",
+            description = "Juste un gros chat qui vole"
+        )*/
+
         getPublications()
+
     }
 
     fun writeNewPublication(
@@ -43,6 +52,7 @@ class HomeActivity : AppCompatActivity() {
         val publicationDate = Calendar.getInstance().time.toString()
         val publicationId = UUID.randomUUID().toString();
         val publication = PublicationClass(
+            publication_id = publicationId,
             publication_name = publication_name,
             user_name = user_name,
             media_url = media_url,
@@ -51,18 +61,10 @@ class HomeActivity : AppCompatActivity() {
             publication_date = publicationDate
         )
 
-        myRef.child(publicationId).setValue(publication)
+        myRef.setValue(publication)
     }
 
-    /*
-    writeNewPublication(
-        publication_name = "char qui fly",
-        user_name = "toto",
-        media_url = "http.cat/100",
-        category = "photography",
-        description = "Juste un gros chat qui vole"
-    )
-    */
+
 
     fun getPublications() {
         /*myRef.get().addOnSuccessListener {

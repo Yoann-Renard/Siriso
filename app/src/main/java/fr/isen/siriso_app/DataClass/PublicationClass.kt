@@ -4,6 +4,7 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class PublicationClass(
+        val publication_id: String? = null,
         val publication_name: String? = null,
         val publication_date: String? = null,
         val user_name: String? = null,
